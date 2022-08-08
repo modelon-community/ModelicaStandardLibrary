@@ -276,7 +276,7 @@ expression(\"sin(pi/6)\");  // returns 0.5
 </html>"));
   end expression;
 
-  function readRealParameter "Read the value of a Real parameter from file"
+  impure function readRealParameter "Read the value of a Real parameter from file"
     extends Modelica.Icons.Function;
     input String fileName "Name of file" annotation(Dialog(
                            loadSelector(filter="Text files (*.txt)",
