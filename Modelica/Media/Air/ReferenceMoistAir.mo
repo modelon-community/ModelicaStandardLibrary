@@ -210,9 +210,8 @@ package ReferenceMoistAir
     input ThermodynamicState state "Thermodynamic state record";
     output MassFraction X_sat "Steam mass fraction of sat. boundary";
   protected
-    MassFraction[:] X;
+    MassFraction[:] X = massFractionSaturation(state);
   algorithm
-    X := massFractionSaturation(state);
     X_sat := X[1];
   end Xsaturation;
 
