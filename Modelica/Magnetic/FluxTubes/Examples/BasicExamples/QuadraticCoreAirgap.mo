@@ -78,7 +78,7 @@ model QuadraticCoreAirgap "Educational example: iron core with airgap"
         extent={{-10,10},{10,-10}},
         rotation=270,
         origin={70,0})));
-  Basic.LeakageWithCoefficient leakage(c_usefulFlux=1 - sigma)
+  Basic.LeakageWithCoefficient leakage(c_usefulFlux=1 - sigma, G_m(start=1e-8))
                                                          annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
