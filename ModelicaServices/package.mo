@@ -279,7 +279,7 @@ but indirectly via the alias definition in
     extends Modelica.Icons.Package;
     impure function exit "Terminate execution of Modelica environment"
       extends Modelica.Utilities.Internal.PartialModelicaServices.System.exitBase;
-      external "C" exit(status) annotation(Include="#include <stdlib.h>", Library="ModelicaExternalC");
+      external "C" exit(status) annotation(Include="#include <stdlib.h>");
       annotation(Documentation(info="<html>
 <p>
 Tool-specific implementation of <a href=\"modelica://Modelica.Utilities.System.exit\">Modelica.Utilities.System.exit</a>.
