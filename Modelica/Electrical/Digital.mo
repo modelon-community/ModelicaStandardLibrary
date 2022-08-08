@@ -2328,7 +2328,7 @@ sum   <strong>Adder4</strong>.c_out  <strong>Adder4.s</strong>  <strong>Adder3.s
               DigitalOutput dataOut[n_data] "Data output" annotation (Placement(transformation(
                 extent={{80,10},{100,30}}), iconTransformation(extent={{80,10},{100,30}})));
 
-              function getMemory "Get Memory"
+              impure function getMemory "Get Memory"
                 extends Modelica.Icons.Function;
                 input String filename;
                 input Integer n_addr "Addr width";
@@ -6799,9 +6799,9 @@ Wires n input signals in one output signal, without delay.
       L mem[integer(2^n_addr),n_data](start=fill(L.'U',integer(2^n_addr),n_data)) "Memory with data, lowest bit on left side";
 
     algorithm
-      if initial() then
+      when initial() then
         mem := getMemory(fileName, n_addr, n_data);
-      end if;
+      end when;
 
       /* write into memory */
       if WE == L.'1' or WE == L.'H' then
@@ -6918,9 +6918,9 @@ Firstly Write is carried out, then Read.</strong></p>
       L m[integer(2^n_addr),n_data](start=fill(L.'U',integer(2^n_addr),n_data)) "Memory with data, lowest bit on left side";
 
     algorithm
-      if initial() then
+      when initial() then
         m := getMemory(fileName, n_addr, n_data);
-      end if;
+      end when;
 
       if RE == L.'0' or RE == L.'L' then
         nextstate := fill(L.'Z',n_data);
