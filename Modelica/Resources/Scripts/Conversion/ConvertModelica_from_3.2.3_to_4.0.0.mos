@@ -296,10 +296,11 @@ convertClass("Modelica.Blocks.Tables.Internal.readTable1DData",
 convertClass("Modelica.Blocks.Tables.Internal.readTable2DData",
               "ObsoleteModelica4.Blocks.Tables.Internal.readTable2DData");
 
+// These rules are disabled here since OCT does not ship or support Modelica_Synchronous.
 // The Modelica_Synchronous library was integrated into the MSL as Modelica.Clocked
-convertElement({"Modelica_Synchronous.RealSignals.TimeBasedSources.Sine"},
-                           "freqHz", "f");
-convertClass("Modelica_Synchronous", "Modelica.Clocked");
+//convertElement({"Modelica_Synchronous.RealSignals.TimeBasedSources.Sine"},
+//                           "freqHz", "f")
+//convertClass("Modelica_Synchronous", "Modelica.Clocked")
 
 // Change renamed elements of classes
 // mue -> mu
