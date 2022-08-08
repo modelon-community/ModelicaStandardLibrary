@@ -5212,7 +5212,7 @@ to the above list of assumptions</li>
       "Return saturation mass fractions"
       extends Modelica.Icons.Function;
       input ThermodynamicState state "Thermodynamic state record";
-      output MassFraction[:] Xsat "Saturation mass fractions";
+      output MassFraction[2] Xsat "Saturation mass fractions";
     end massFractionSaturation;
 
     replaceable partial function massFraction_pTphi
