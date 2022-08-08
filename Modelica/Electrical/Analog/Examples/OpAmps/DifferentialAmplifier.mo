@@ -142,7 +142,7 @@ equation
           {-30,6},{-20,6}}, color={0,0,255}));
   annotation (experiment(
       StopTime=0.2,
-      Interval=0.0001,
+      Interval=0.0002,
       Tolerance=1e-06),
     Diagram(coordinateSystem(extent={{-140,-100},{140,100}})),
     Documentation(info="<html>
