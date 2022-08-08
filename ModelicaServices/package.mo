@@ -1,5 +1,5 @@
 within ;
-package ModelicaServices "ModelicaServices (Default implementation) - Models and functions used in the Modelica Standard Library requiring a tool specific implementation"
+package ModelicaServices "ModelicaServices (Modelon implementation) - Models and functions used in the Modelica Standard Library requiring a tool specific implementation"
   extends Modelica.Icons.Package;
   constant String target="Default"
     "Target of this ModelicaServices implementation";
@@ -114,6 +114,37 @@ The design of the Animation.Shape component is from Hilding Elmqvist, previously
       extends
         Modelica.Utilities.Internal.PartialModelicaServices.Animation.PartialShape;
 
+      Real[3,3] _T=R.T annotation(HideResult=false);
+
+      Real[3] _color=color annotation(HideResult=false);
+      Real _specularCoefficient=specularCoefficient annotation(HideResult=false);
+      Real[3] _r=r annotation(HideResult=false);
+      Real[3] _r_shape=r_shape annotation(HideResult=false);
+
+      Real _length=length annotation(HideResult=false);
+      Real _width=width annotation(HideResult=false);
+      Real _height=height annotation(HideResult=false);
+
+      Real[3] _lengthDirection=lengthDirection annotation(HideResult=false);
+      Real[3] _widthDirection=widthDirection annotation(HideResult=false);
+
+      Real _extra=extra annotation(HideResult=false);
+      String _shapeType=shapeType annotation(HideResult=false);
+  protected
+    parameter Integer ModelicaServices_Animation_Shape_shape = if shapeType=="box" then 1
+      elseif shapeType=="sphere" then 2
+      elseif shapeType=="cylinder" then 3
+      elseif shapeType=="cone" then 4
+      elseif shapeType=="pipe" then 5
+      elseif shapeType=="beam" then 6
+      elseif shapeType=="wirebox" then 7
+      elseif shapeType=="gearwheel" then 8
+      elseif shapeType=="vector" then 9
+      elseif shapeType=="pipecylinder" then 10
+      elseif shapeType=="spring" then 11
+      elseif shapeType=="tire" or shapeType=="tyre" then 12
+      else 100 annotation(HideResult=false);
+
       annotation (Icon(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-100,-100},{100,100}}),
@@ -132,6 +163,35 @@ The interface of this model is documented at
       "Animation of a moveable, parameterized surface; the surface characteristic is provided by a function"
       extends Modelica.Utilities.Internal.PartialModelicaServices.Animation.PartialSurface;
 
+    parameter Boolean smoothSurface=false "= true: 3D model will be smooth"
+      annotation (Dialog(group="Material properties"));
+
+    Real[3,3] _T=R.T annotation(HideResult=false);
+
+    Real[3] _color=color annotation(HideResult=false);
+
+    Real _specularCoefficient=specularCoefficient annotation(HideResult=false);
+
+    Real[3] _r_0=r_0 annotation(HideResult=false);
+
+    parameter Integer _nu=nu annotation(HideResult=false);
+    parameter Integer _nv=nv annotation(HideResult=false);
+
+    parameter Boolean _multiColoredSurface=multiColoredSurface annotation(HideResult=false);
+
+    parameter Boolean _wireframe = wireframe annotation(HideResult=false);
+
+    Real _transparency=transparency annotation(HideResult=false);
+
+  protected
+    parameter Boolean ModelicaServices_Animation_Surface_surface = true annotation(HideResult=false);
+    Real x[nu, nv] annotation(HideResult=false);
+    Real y[nu, nv] annotation(HideResult=false);
+    Real z[nu, nv] annotation(HideResult=false);
+    Real C[if multiColoredSurface then nu else 0, if multiColoredSurface then nv else 0, 3] annotation(HideResult=false);
+  equation
+    (x, y, z, C) = surfaceCharacteristic(nu,nv,multiColoredSurface);
+
       annotation (Documentation(info="<html>
 <p>
 The interface of this model is documented at
@@ -143,19 +203,39 @@ The interface of this model is defined at
 </html>"));
     end Surface;
 
-    model Vector "Animation of a moveable vector-quantity (the length is not fixed in meters)"
-      extends Modelica.Utilities.Internal.PartialModelicaServices.Animation.PartialVector;
+  model Vector "Animation of a moveable vector-quantity (the length is not fixed in meters)"
+    extends Modelica.Utilities.Internal.PartialModelicaServices.Animation.PartialVector;
+  protected
+    Real[3,3] _T=R.T annotation(HideResult=false);
 
-  annotation (Documentation(info="<html>
-<p>
-The interface of this model is documented at
-<a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Advanced.Vector\">Modelica.Mechanics.MultiBody.Visualizers.Advanced.Vector</a>.<br>
-The interface of this model is defined at
-<a href=\"modelica://Modelica.Utilities.Internal.PartialModelicaServices.Animation.PartialVector\">Modelica.Utilities.Internal.PartialModelicaServices.Animation.PartialVector</a>.
-</p>
+    Real[3] _color=color annotation(HideResult=false);
+    Real _specularCoefficient=specularCoefficient annotation(HideResult=false);
+    Real[3] _r=r annotation(HideResult=false);
+    Real[3] _r_shape={0,0,0} annotation(HideResult=false);
 
-</html>"));
-    end Vector;
+    Real _length=coordinates[1] annotation(HideResult=false);
+    Real _width=coordinates[2] annotation(HideResult=false);
+    Real _height=coordinates[3] annotation(HideResult=false);
+
+    Real[3] _lengthDirection={1,0,0} annotation(HideResult=false);
+    Real[3] _widthDirection={0,1,0} annotation(HideResult=false);
+
+    Real _extra=Integer(quantity)-1+(if headAtOrigin then 10 else 0) annotation(HideResult=false);
+    String _shapeType="vector" annotation(HideResult=false);
+
+    parameter Integer ModelicaServices_Animation_Shape_shape = 9 annotation(HideResult=false);
+
+    annotation (Documentation(info=
+                                "<html>
+        <p>
+        The interface of this model is documented at
+        <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Advanced.Vector\">Modelica.Mechanics.MultiBody.Visualizers.Advanced.Vector</a>.<br>
+        The interface of this model is defined at
+        <a href=\"modelica://Modelica.Utilities.Internal.PartialModelicaServices.Animation.PartialVector\">Modelica.Utilities.Internal.PartialModelicaServices.Animation.PartialVector</a>.
+        </p>
+
+        </html>"));
+  end Vector;
   end Animation;
 
   package ExternalReferences "Library of functions to access external resources"
@@ -231,6 +311,7 @@ Specification (version &ge; 3.3).
   end Types;
 
   annotation (
+    Protection(access=Access.hide),
     preferredView="info",
     version="4.1.0",
     versionDate="2024-01-12",
