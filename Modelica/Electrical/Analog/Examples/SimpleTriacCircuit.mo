@@ -58,7 +58,7 @@ equation
   annotation (experiment(
       StopTime=0.001,
       Interval=5e-7,
-      Tolerance=1e-12),
+      Tolerance=1e-10),
     Documentation(revisions="<html>
 <ul>
 <li><em>November 25, 2009   </em><br>
