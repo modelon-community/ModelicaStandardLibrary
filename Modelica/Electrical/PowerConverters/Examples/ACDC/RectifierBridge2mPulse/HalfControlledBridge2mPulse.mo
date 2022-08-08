@@ -96,7 +96,7 @@ equation
   annotation (
     experiment(
       StopTime=0.1,
-      Tolerance=1e-06,
+      Tolerance=3e-07,
       Interval=0.0002),
     Documentation(info="<html>
 <p>This example shows a half controlled <code>2*m</code> pulse bridge rectifier with resistive load, where <code>m</code> is the number of phases. In case of resistive load the half controlled bridge shows the same output voltage as the
