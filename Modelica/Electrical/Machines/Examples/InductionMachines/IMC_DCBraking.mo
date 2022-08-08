@@ -19,6 +19,7 @@ model IMC_DCBraking "Induction machine with DC current braking"
     imcData annotation (Placement(transformation(extent={{20,-40},{40,-20}})));
   Modelica.Electrical.Machines.BasicMachines.InductionMachines.IM_SquirrelCage imc(
     p=imcData.p,
+    is(stateSelect={StateSelect.always, StateSelect.always, StateSelect.never}),
     fsNominal=imcData.fsNominal,
     Rs=imcData.Rs,
     TsRef=imcData.TsRef,
