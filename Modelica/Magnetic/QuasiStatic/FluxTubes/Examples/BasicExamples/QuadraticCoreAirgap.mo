@@ -65,7 +65,7 @@ model QuadraticCoreAirgap "Educational example: iron core with airgap"
         extent={{-10,10},{10,-10}},
         rotation=270,
         origin={80,0})));
-  Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.LeakageWithCoefficient leakage(c_usefulFlux=1 - sigma) annotation (Placement(transformation(
+  Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.LeakageWithCoefficient leakage(c_usefulFlux=1 - sigma, G_m(start=1e-8)) annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=270,
         origin={10,0})));
