@@ -69,7 +69,7 @@ model DifferentialAmplifier "Differential amplifier"
         extent={{10,-10},{-10,10}},
         rotation=90,
         origin={80,-30})));
-  Modelica.Blocks.Math.RootMeanSquare rootMeanSquare(f=data.fSource)
+  Modelica.Blocks.Math.RootMeanSquare rootMeanSquare(f=data.fSource, mean(x(nominal=0.01)))
     annotation (Placement(transformation(extent={{100,-40},{120,-20}})));
   Modelica.Electrical.Analog.Basic.Ground ground
     annotation (Placement(transformation(extent={{-120,-90},{-100,-70}})));
