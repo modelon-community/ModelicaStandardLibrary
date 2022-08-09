@@ -1635,15 +1635,17 @@ The output signal is positive, if the heat flows from port_a to port_b.
       annotation (defaultComponentName="heatFlowSensor",
         Icon(graphics={
           Rectangle(
-            lineColor = {255,0,0},
+            lineColor = {0,0,0},
             fillColor = {255,0,0},
             fillPattern = FillPattern.HorizontalCylinder,
-            extent = {{-90,-10},{-70,10}}),
+            extent = {{-90,-10},{-70,10}},
+            pattern=LinePattern.None),
           Rectangle(
-            lineColor = {255,0,0},
+            lineColor = {0,0,0},
             fillColor = {255,0,0},
             fillPattern = FillPattern.HorizontalCylinder,
-            extent={{70,-10},{90,10}}),
+            extent={{70,-10},{90,10}},
+            pattern=LinePattern.None),
           Text(
             lineColor = {0,0,255},
             extent = {{-150,85},{150,125}},

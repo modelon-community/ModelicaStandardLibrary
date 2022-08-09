@@ -10801,40 +10801,46 @@ even though the source's and/or load's starpoint are grounded; you may use a rea
                   -60,-50},{-80,-70}}),
             Rectangle(
               origin={10,10},
-              lineColor={128,0,255},
+              lineColor={0,0,0},
               fillColor={128,0,255},
               fillPattern=FillPattern.VerticalCylinder,
-              extent={{-88,-46},{-52,26}}),
+              extent={{-88,-46},{-52,26}},
+              pattern=LinePattern.None),
             Rectangle(
               origin={10,10},
-              lineColor={0,128,255},
+              lineColor={0,0,0},
               fillColor={0,128,255},
               fillPattern=FillPattern.VerticalCylinder,
-              extent={{-94,-38},{-46,18}}),
+              extent={{-94,-38},{-46,18}},
+              pattern=LinePattern.None),
             Rectangle(
               origin={10,10},
-              lineColor={128,0,255},
+              lineColor={0,0,0},
               fillColor={128,0,255},
               fillPattern=FillPattern.VerticalCylinder,
-              extent={{-28,-46},{8,26}}),
+              extent={{-28,-46},{8,26}},
+              pattern=LinePattern.None),
             Rectangle(
               origin={10,10},
-              lineColor={0,128,255},
+              lineColor={0,0,0},
               fillColor={0,128,255},
               fillPattern=FillPattern.VerticalCylinder,
-              extent={{-34,-38},{14,18}}),
+              extent={{-34,-38},{14,18}},
+              pattern=LinePattern.None),
             Rectangle(
               origin={10,10},
-              lineColor={128,0,255},
+              lineColor={0,0,0},
               fillColor={128,0,255},
               fillPattern=FillPattern.VerticalCylinder,
-              extent={{32,-46},{68,26}}),
+              extent={{32,-46},{68,26}},
+              pattern=LinePattern.None),
             Rectangle(
               origin={10,10},
-              lineColor={0,128,255},
+              lineColor={0,0,0},
               fillColor={0,128,255},
               fillPattern=FillPattern.VerticalCylinder,
-              extent={{26,-38},{74,18}})}));
+              extent={{26,-38},{74,18}},
+              pattern=LinePattern.None)}));
     end Transformers;
 
     package Components "Machine components like AirGaps"
@@ -11396,9 +11402,10 @@ If <code>quasiStationary == false</code>, the electrical transients are neglecte
                       textString="A"),Rectangle(
                       visible=quasiStationary,
                       extent={{-10,90},{10,-80}},
-                      lineColor={170,213,255},
+                      lineColor={0,0,0},
                       fillPattern=FillPattern.VerticalCylinder,
-                      fillColor={170,213,255})}), Documentation(info="<html>
+                      fillColor={170,213,255},
+                      pattern=LinePattern.None)}), Documentation(info="<html>
 Linear model of the airgap (without saturation effects) of a DC machine, using only equations.<br>
 Induced excitation voltage is calculated from der(flux), where flux is defined by excitation inductance times excitation current.
 If <code>quasiStationary == false</code>, the electrical transients are neglected, i.e., the induced excitation voltage is zero.<br>
@@ -16166,29 +16173,41 @@ This icon is designed for a <strong>FundamentalWave machine</strong> model.
                   fillPattern=FillPattern.VerticalCylinder,
                   fillColor={135,135,135}),Rectangle(
                   extent={{-78,36},{-42,-36}},
-                  lineColor={128,0,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={128,0,255}),Rectangle(
+                  fillColor={128,0,255},
+                  pattern=LinePattern.None),
+                  Rectangle(
                   extent={{-84,28},{-36,-28}},
-                  lineColor={0,128,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={0,128,255}),Rectangle(
+                  fillColor={0,128,255},
+                  pattern=LinePattern.None),
+                  Rectangle(
                   extent={{-18,36},{18,-36}},
-                  lineColor={128,0,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={128,0,255}),Rectangle(
+                  fillColor={128,0,255},
+                  pattern=LinePattern.None),
+                  Rectangle(
                   extent={{-24,28},{24,-28}},
-                  lineColor={0,128,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={0,128,255}),Rectangle(
+                  fillColor={0,128,255},
+                  pattern=LinePattern.None),
+                  Rectangle(
                   extent={{42,36},{78,-36}},
-                  lineColor={128,0,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={128,0,255}),Rectangle(
+                  fillColor={128,0,255},
+                  pattern=LinePattern.None),
+                  Rectangle(
                   extent={{36,28},{84,-28}},
-                  lineColor={0,128,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={0,128,255})}), Documentation(info="<html>
+                  fillColor={0,128,255},
+                  pattern=LinePattern.None)}),
+                  Documentation(info="<html>
 <p>
 This icon is designed for a <strong>transient transformer</strong> model.
 </p>
@@ -16217,29 +16236,40 @@ This icon is designed for a <strong>transient transformer</strong> model.
                   fillPattern=FillPattern.VerticalCylinder,
                   fillColor={135,135,135}),Rectangle(
                   extent={{-78,36},{-42,-36}},
-                  lineColor={213,170,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={213,170,255}),Rectangle(
+                  fillColor={213,170,255},
+                  pattern=LinePattern.None),
+                  Rectangle(
                   extent={{-84,28},{-36,-28}},
-                  lineColor={170,213,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={170,213,255}),Rectangle(
+                  fillColor={170,213,255},
+                  pattern=LinePattern.None),
+                  Rectangle(
                   extent={{-18,36},{18,-36}},
-                  lineColor={213,170,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={213,170,255}),Rectangle(
+                  fillColor={213,170,255},
+                  pattern=LinePattern.None),
+                  Rectangle(
                   extent={{-24,28},{24,-28}},
-                  lineColor={170,213,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={170,213,255}),Rectangle(
+                  fillColor={170,213,255},
+                  pattern=LinePattern.None),
+                  Rectangle(
                   extent={{42,36},{78,-36}},
-                  lineColor={213,170,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={213,170,255}),Rectangle(
+                  fillColor={213,170,255},
+                  pattern=LinePattern.None),
+                  Rectangle(
                   extent={{36,28},{84,-28}},
-                  lineColor={170,213,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={170,213,255})}), Documentation(info="<html>
+                  fillColor={170,213,255},
+                  pattern=LinePattern.None)}), Documentation(info="<html>
 <p>
 This icon is designed for a <strong>quasistationary transformer</strong> model.
 </p>

@@ -2908,10 +2908,10 @@ This is a simple model of an inductor with a ferromagnetic core. The used Generi
           A=5e-4,
           MagRel(start=0.5, fixed=true))
           annotation (Placement(transformation(extent={{-10,10},{10,30}})));
-      
+
       initial equation
         core.derHstat = 0.0;
-      
+
       equation
         connect(winding1.port_n, mag_ground.port) annotation (Line(points={{-20,-10},{-20,-20},{0,-20}}, color={255,127,0}));
         connect(vSource.p, resistor1.p) annotation (Line(points={{-80,10},{-80,20},{-70,20}}, color={0,0,255}));
@@ -3370,14 +3370,16 @@ An example simulation shows the transformer inrush currents due to an initially 
                   fillPattern=FillPattern.VerticalCylinder),
                 Rectangle(
                   extent={{-68,36},{-12,-36}},
-                  lineColor={0,128,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={0,128,255}),
+                  fillColor={0,128,255},
+                  pattern=LinePattern.None),
                 Rectangle(
                   extent={{20,20},{60,-20}},
-                  lineColor={128,0,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={128,0,255}),
+                  fillColor={128,0,255},
+                  pattern=LinePattern.None),
                 Text(
                   extent={{150,150},{-150,110}},
                   lineColor={0,0,255},
@@ -3765,9 +3767,10 @@ Simple model of a single phase transformer with a primary and a secondary windin
                   fillPattern=FillPattern.VerticalCylinder),
                 Rectangle(
                   extent={{-74,36},{-46,-36}},
-                  lineColor={128,0,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={128,0,255}),
+                  fillColor={128,0,255},
+                  pattern=LinePattern.None),
                 Text(
                   extent={{150,130},{-150,90}},
                   lineColor={0,0,255},
@@ -3802,29 +3805,34 @@ Simple model of a single phase transformer with a primary and a secondary windin
                   rotation=90),
                 Rectangle(
                   extent={{-80,26},{-40,-26}},
-                  lineColor={0,128,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={0,128,255}),
+                  fillColor={0,128,255},
+                  pattern=LinePattern.None),
                 Rectangle(
                   extent={{-14,36},{14,-36}},
-                  lineColor={128,0,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={128,0,255}),
+                  fillColor={128,0,255},
+                  pattern=LinePattern.None),
                 Rectangle(
                   extent={{-20,26},{20,-26}},
-                  lineColor={0,128,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={0,128,255}),
+                  fillColor={0,128,255},
+                  pattern=LinePattern.None),
                 Rectangle(
                   extent={{46,36},{74,-36}},
-                  lineColor={128,0,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={128,0,255}),
+                  fillColor={128,0,255},
+                  pattern=LinePattern.None),
                 Rectangle(
                   extent={{40,26},{80,-26}},
-                  lineColor={0,128,255},
+                  lineColor={0,0,0},
                   fillPattern=FillPattern.VerticalCylinder,
-                  fillColor={0,128,255})}),
+                  fillColor={0,128,255},
+                  pattern=LinePattern.None)}),
             Documentation(info="<html>
 <p>
 Simple model of a three phase transformer with primary and a secondary windings and a magnetic E-I shaped core. The core is modeled with <a href=\"modelica://Modelica.Magnetic.FluxTubes.Shapes.HysteresisAndMagnets.GenericHystTellinenEverett\">GenericHystTellinenEverett</a> flux tube elements. Thus, this model considers static and dynamic hysteresis as well as initial flux.

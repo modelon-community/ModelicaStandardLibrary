@@ -883,9 +883,10 @@ package AST_BatchPlant
                 200,100}}), graphics={
             Rectangle(
               extent={{-200,100},{0,-100}},
-              lineColor={255,255,255},
+              lineColor={0,0,0},
               fillColor={255,255,255},
-              fillPattern=FillPattern.VerticalCylinder),
+              fillPattern=FillPattern.VerticalCylinder,
+              pattern=LinePattern.None),
             Rectangle(
               extent=DynamicSelect({{-200,-100},{0,0}}, {{-200,-100},{0,(-100
                    + 200*level/height)}}),
@@ -1664,9 +1665,10 @@ end for;
             initialScale=0.2), graphics={
             Rectangle(
               extent={{-100,-100},{100,100}},
-              lineColor={255,255,255},
+              lineColor={0,0,0},
               fillColor={255,255,255},
-              fillPattern=FillPattern.VerticalCylinder),
+              fillPattern=FillPattern.VerticalCylinder,
+              pattern=LinePattern.None),
             Rectangle(
               extent=DynamicSelect({{-100,-100},{100,0}}, {{-100,-100},{100,(-100
                    + 200*level/height)}}),
