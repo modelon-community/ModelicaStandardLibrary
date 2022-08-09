@@ -681,7 +681,8 @@ _Ret_z_ const char* ModelicaInternal_fullPathName(_In_z_ const char* name) {
             name, strerror(errno));
         return "";
     }
-    fullName = ModelicaDuplicateString(tempName);
+    fullName = ModelicaAllocateString(strlen(tempName));
+    strcpy(fullName, tempName);
     ModelicaConvertToUnixDirectorySeparator(fullName);
     return fullName;
 #elif (_BSD_SOURCE || _XOPEN_SOURCE >= 500 || _XOPEN_SOURCE && _XOPEN_SOURCE_EXTENDED || _POSIX_VERSION >= 200112L)
@@ -693,7 +694,8 @@ _Ret_z_ const char* ModelicaInternal_fullPathName(_In_z_ const char* name) {
     if (tempName == NULL) {
         goto FALLBACK_getcwd;
     }
-    fullName = ModelicaDuplicateString(tempName);
+    fullName = ModelicaAllocateString(strlen(tempName) + 1);
+    strcpy(fullName, tempName);
     ModelicaConvertToUnixDirectorySeparator(fullName);
     /* Retain trailing slash to match _fullpath behaviour */
     len = strlen(name);
