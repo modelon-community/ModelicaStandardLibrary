@@ -1428,8 +1428,8 @@ The mechanical load is a constant torque like a conveyor (with regularization ar
                 {-40,60},{-30,60}}, color={0,0,255}));
         connect(sineVoltage.plug_n, star.plug_p)
           annotation (Line(points={{-80,-40},{-80,-50}},   color={0,0,255}));
-        connect(star.pin_n, ground.p)
-          annotation (Line(points={{-80,-70},{-80,-80}}, color={0,0,255}));
+        connect(ground.p, capacitor.n)
+          annotation (Line(points={{-30,-52},{-30,-60}}, color={0,0,255}));
         connect(resistor.plug_n, inductor.plug_p)
           annotation (Line(points={{-80,40},{-80,50}},   color={0,0,255}));
         connect(inductor.plug_n, rectifier.ac)
