@@ -1578,7 +1578,7 @@ frame_b of the joint.
         sequence_angleStates) "Potential angle states at initial time";
     SI.Angle phi[3](start=phi_start, each stateSelect=if enforceStates then (if
           useQuaternions then StateSelect.never else StateSelect.always) else
-          StateSelect.prefer)
+          StateSelect.prefer, fixed=true)
       "Dummy or 3 angles to rotate frame_a into frame_b";
     SI.AngularVelocity phi_d[3](each stateSelect=if enforceStates then (if
           useQuaternions then StateSelect.never else StateSelect.always) else
