@@ -35,6 +35,7 @@ model DifferentialAmplifier "Differential amplifier"
     annotation (Placement(transformation(extent={{-60,-70},{-40,-50}})));
   Modelica.Electrical.Analog.Ideal.IdealizedOpAmpLimited opAmp(
     V0=data.V0,
+    strict=true,
     useSupply=true,
     Vps=+data.VSupply,
     Vns=-data.VSupply)
