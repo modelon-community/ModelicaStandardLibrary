@@ -1466,7 +1466,7 @@ Plot torque <code>tau</code>, current <code>currentSensor.i</code> and average c
           annotation (
             experiment(
               StopTime=0.1,
-              Tolerance=1e-06,
+              Tolerance=3e-07,
               Interval=0.0002),
             Documentation(info="<html>
 <p>This example shows an uncontrolled <code>2*m</code> pulse diode bridge rectifier with resistive load, where <code>m</code> is the number of phases.</p>
