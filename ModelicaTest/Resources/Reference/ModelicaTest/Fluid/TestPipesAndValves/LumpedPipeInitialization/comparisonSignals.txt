@@ -1,4 +1,0 @@
-time
-pipe.volume.medium.h
-pipe.volume.medium.p
-m_flow_initial

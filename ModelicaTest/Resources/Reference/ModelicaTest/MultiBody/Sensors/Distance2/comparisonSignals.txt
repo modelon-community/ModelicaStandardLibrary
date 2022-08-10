@@ -1,3 +1,0 @@
-time
-distance1.distance
-distance2.distance

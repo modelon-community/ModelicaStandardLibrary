@@ -1,4 +1,0 @@
-time
-t_new.y
-const.y
-clock.y

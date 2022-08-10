@@ -1,5 +1,0 @@
-time
-torus1.surface.nu
-torus1.surface.nv
-torus2.surface.nu
-torus2.surface.nv

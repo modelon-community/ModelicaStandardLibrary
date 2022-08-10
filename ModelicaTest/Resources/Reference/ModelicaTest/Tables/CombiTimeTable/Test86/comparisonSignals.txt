@@ -1,2 +1,0 @@
-time
-t_new.y[1]

@@ -1,5 +1,0 @@
-time
-padeDelay1a.y
-padeDelay1b.y
-padeDelay2a.y
-padeDelay2b.y

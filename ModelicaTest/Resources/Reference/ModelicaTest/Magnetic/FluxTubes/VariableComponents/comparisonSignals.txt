@@ -1,5 +1,0 @@
-time
-reluctance.V_m
-reluctance.Phi
-permeance.V_m
-permeance.Phi

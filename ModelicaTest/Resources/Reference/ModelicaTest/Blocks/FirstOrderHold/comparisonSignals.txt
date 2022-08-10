@@ -1,8 +1,0 @@
-time
-firstOrderHold.c
-firstOrderHold.firstTrigger
-firstOrderHold.pre_uSample
-firstOrderHold.tSample
-firstOrderHold.uSample
-zeroOrderHold.firstTrigger
-zeroOrderHold.ySample

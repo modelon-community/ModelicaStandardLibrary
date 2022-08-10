@@ -1,3 +1,0 @@
-time
-prismatic.s
-prismatic.v

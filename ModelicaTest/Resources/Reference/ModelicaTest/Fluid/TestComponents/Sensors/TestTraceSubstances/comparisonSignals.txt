@@ -1,3 +1,0 @@
-time
-traceSubstance.C
-traceSubstance1.C

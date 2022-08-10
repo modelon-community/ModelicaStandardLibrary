@@ -1,8 +1,0 @@
-time
-prismatic1.s
-prismatic1.v
-sps1.s_damper
-universal1.phi_a
-universal1.phi_b
-universal1.w_a
-universal1.w_b

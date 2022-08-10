@@ -1,4 +1,0 @@
-time
-magneticPotentialDifferenceSensor.Phi
-magneticFluxSensor.Phi
-magneticPotentialDifferenceSensor.V_m

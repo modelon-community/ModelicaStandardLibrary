@@ -1,6 +1,0 @@
-time
-h
-rho
-mu
-cp
-k

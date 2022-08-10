@@ -1,5 +1,0 @@
-time
-revolute1.phi
-revolute1.w
-revolute2.phi
-revolute2.w

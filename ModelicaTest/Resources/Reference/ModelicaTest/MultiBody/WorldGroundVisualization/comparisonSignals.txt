@@ -1,4 +1,0 @@
-time
-visGroundAxis.n[1]
-visGroundAxis.n[2]
-visGroundAxis.n[3]
