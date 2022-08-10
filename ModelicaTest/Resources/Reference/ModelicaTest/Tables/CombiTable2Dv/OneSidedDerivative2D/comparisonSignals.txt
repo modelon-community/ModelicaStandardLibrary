@@ -1,5 +1,0 @@
-time
-der1.y
-der2.y
-der3.y
-der4.y

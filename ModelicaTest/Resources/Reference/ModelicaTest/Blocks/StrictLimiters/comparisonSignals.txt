@@ -1,9 +1,0 @@
-time
-PID1.D.x
-PID1.I.y
-PID2.D.x
-PID2.I.y
-limIntegrator1.y
-limIntegrator2.y
-slewRateLimiter1.y
-slewRateLimiter2.y

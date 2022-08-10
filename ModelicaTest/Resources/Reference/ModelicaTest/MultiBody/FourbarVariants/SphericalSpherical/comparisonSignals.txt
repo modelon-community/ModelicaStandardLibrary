@@ -1,3 +1,0 @@
-time
-j1.phi
-j1.w

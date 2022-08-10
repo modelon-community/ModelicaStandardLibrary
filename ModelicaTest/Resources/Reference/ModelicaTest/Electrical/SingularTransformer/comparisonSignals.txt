@@ -1,3 +1,0 @@
-time
-basicTransformer.i1
-basicTransformer.i2

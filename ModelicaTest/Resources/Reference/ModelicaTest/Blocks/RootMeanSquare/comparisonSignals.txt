@@ -1,5 +1,0 @@
-time
-mean1.x
-rootMeanSquare.mean.x
-mean1.y
-rootMeanSquare.mean.y
