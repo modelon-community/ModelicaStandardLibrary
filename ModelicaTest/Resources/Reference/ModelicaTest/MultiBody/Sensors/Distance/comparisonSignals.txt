@@ -1,2 +1,0 @@
-time
-Distance1.distance

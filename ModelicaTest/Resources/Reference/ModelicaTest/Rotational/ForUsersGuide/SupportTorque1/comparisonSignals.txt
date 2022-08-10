@@ -1,4 +1,0 @@
-time
-inertia4.phi
-inertia4.w
-bearingFriction1.mode

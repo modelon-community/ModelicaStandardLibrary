@@ -1,4 +1,0 @@
-time
-t_new.y[1]
-clock1.y
-clock2.y

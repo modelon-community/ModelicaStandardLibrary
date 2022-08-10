@@ -1,9 +1,0 @@
-time
-mean.x
-yMean
-yRectifiedMean
-yRootMeanSquare
-yHarmonicCos
-yHarmonicSin
-yHarmonicAbs
-yHarmonicArg
