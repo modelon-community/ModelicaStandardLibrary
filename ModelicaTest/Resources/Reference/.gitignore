@@ -1,5 +1,0 @@
-# exclude following files
-*.csv
-*.log
-*.mat
-**/creation.txt

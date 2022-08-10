@@ -1,5 +1,0 @@
-time
-p
-s
-u
-Tsat
