@@ -3747,7 +3747,6 @@ Additionally, the frequency of the current source is defined by a real signal in
       extends Interfaces.TwoPlug;
       import Modelica.Constants.eps;
       Modelica.SIunits.Angle gamma(start=0) = plug_p.reference.gamma;
-      parameter Integer m=3 "Number of phases";
       parameter Modelica.SIunits.Frequency fStart(final min=eps, start=1) "Start sweep frequency";
       parameter Modelica.SIunits.Frequency fStop(final min=eps, start=1) "Stop sweep frequency";
       parameter Modelica.SIunits.Time startTime=0 "Start time of frequency sweep";
@@ -3944,7 +3943,6 @@ Additionally, the frequency of the current source is defined by a real signal in
       extends Interfaces.TwoPlug;
       import Modelica.Constants.eps;
       Modelica.SIunits.Angle gamma(start=0) = plug_p.reference.gamma;
-      parameter Integer m=3 "Number of phases";
       parameter Modelica.SIunits.Frequency fStart(final min=eps, start=1) "Start sweep frequency";
       parameter Modelica.SIunits.Frequency fStop(final min=eps, start=1) "Stop sweep frequency";
       parameter Modelica.SIunits.Time startTime=0 "Start time of frequency sweep";
