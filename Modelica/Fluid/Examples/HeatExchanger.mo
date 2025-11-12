@@ -88,7 +88,7 @@ package HeatExchanger "Demo of a heat exchanger model"
                                         annotation (Line(
         points={{37,2.2},{42,2},{50,2},{50,-18},{62,-18}}, color={0,127,255}));
     annotation (experiment(StopTime=200, Tolerance=
-            1e-005),
+            1e-006),
       Documentation(info="<html>
 <p>The simulation start in steady state with counterflow operation. At time t = 50, the mass flow rate on the secondary circuit is changed to a negative value in 5 seconds. After a transient, the heat exchanger operates in co-current flow.</p>
 <div><img src=\"modelica://Modelica/Resources/Images/Fluid/Examples/HeatExchanger/HeatExchanger.png\" alt=\"HeatExchanger.png\"/></div>
